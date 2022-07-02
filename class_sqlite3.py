@@ -1,7 +1,4 @@
 import sqlite3
-import random
-import json
-
 
 class Sqlite_db:
     def __init__(self, name_db, table_name, row_factory: bool = False):
@@ -102,6 +99,5 @@ class Sqlite_db:
 
 
 if __name__ == '__main__':
-    # db = Sqlite_db('test.db', table_name='test_table')
     db = Sqlite_db('test.db', row_factory=True, table_name='test_table')
     db.create_table(id='intenger', name='text', surname='blob')
